@@ -269,9 +269,7 @@ public class Main{
 		int pil = in.nextInt();
 		switch (pil){
 		case 1 :
-
 		BangunRuang br = new BangunRuang();
-
 		System.out.println("1. KUBUS\n2. BALOK\n3. PRISMA SEGITIGA\n4. LIMAS SEGI EMPAT\n5. LIMAS SEGITIGA\n6. TABUNG\n7. KERUCUT\n8. BOLA");
 		System.out.println("Masukkan Pilihan : ");
 		int pilih = in.nextInt();
@@ -338,7 +336,6 @@ public class Main{
 		limassegitiga.tinggi = tinggi_br_limassegitiga;
 		limassegitiga.volume();
 		break;
-
 		case 6 :
 		System.out.println("--TABUNG--");
 		Tabung tabung = new Tabung();
@@ -376,13 +373,10 @@ public class Main{
 		bola.luaspermukaan();
 		break;
 		}
-
 		br.volume();
 		br.keliling();
 		br.luaspermukaan();
-
 		break;
-
 		case 2 :
 		BangunDatar bd = new BangunDatar();
 		System.out.println("1. KUBUS\n2. LINGKARAN\n3. PERSEGI PANJANG\n4. SEGITIGA");
