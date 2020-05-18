@@ -77,9 +77,9 @@ import java.util.Scanner; import java.util.*;
  float volume = (float) Math.PI*r*r*r*1.333F; System.out.println("Volume Bola : "+volume); return volume;
  } @Override
  float luaspermukaan(){ float luaspermukaan = (float) Math.PI*r*r*4F; System.out.println("luaspermukaan Bola : "+luaspermukaan); return luaspermukaan; } } public class Main{
- public static void main(String[] args){ Scanner in = new Scanner(System.in); System.out.println ("1. RUMUS BANGUN RUANGn2. RUMUS BANGUN DATAR"); System.out.println ("Masukkan Pilihan : "); int pil = in.nextInt(); switch (pil){
+ public static void main(String[] args){ Scanner in = new Scanner(System.in); System.out.println ("1. RUMUS BANGUN RUANG\n2. RUMUS BANGUN DATAR"); System.out.println ("Masukkan Pilihan : "); int pil = in.nextInt(); switch (pil){
  case 1 :
- BangunRuang br = new BangunRuang(); System.out.println("1. KUBUSn2. BALOKn3. PRISMA SEGITIGAn4. LIMAS SEGI EMPATn5. LIMAS SEGITIGAn6. TABUNGn7. KERUCUTn8. BOLA"); System.out.println("Masukkan Pilihan : "); int pilih = in.nextInt(); switch (pilih){
+ BangunRuang br = new BangunRuang(); System.out.println("1. KUBUS\n2. BALOK\n3. PRISMA SEGITIGA\n4. LIMAS SEGI EMPAT\n5. LIMAS SEGITIGA\n6. TABUNG\n7. KERUCUT\n8. BOLA"); System.out.println("Masukkan Pilihan : "); int pilih = in.nextInt(); switch (pilih){
  case 1 :
  System.out.println("--KUBUS--"); Kubus kubus = new Kubus(); System.out.println("Masukkan sisi kubus : "); int sisi_br_kubus = in.nextInt(); kubus.sisi = sisi_br_kubus; kubus.volume();
  kubus.luaspermukaan(); kubus.keliling();
@@ -110,7 +110,7 @@ import java.util.Scanner; import java.util.*;
  br.luaspermukaan();
  break;
  case 2 :
- BangunDatar bd = new BangunDatar(); System.out.println("1. KUBUSn2. LINGKARANn3. PERSEGI PANJANGn4. SEGITIGA"); System.out.println("Masukkan Pilihan : "); int pilihh = in.nextInt(); switch (pilihh){
+ BangunDatar bd = new BangunDatar(); System.out.println("1. KUBUS\n2. LINGKARAN\n3. PERSEGI PANJANG\n4. SEGITIGA"); System.out.println("Masukkan Pilihan : "); int pilihh = in.nextInt(); switch (pilihh){
  case 1 :
  System.out.println("--KUBUS--"); Persegi persegi = new Persegi(); System.out.println("Masukkan sisi : "); int sisi_bd = in.nextInt(); persegi.sisi = sisi_bd; persegi.luas();
  persegi.keliling();break; case 2 :
