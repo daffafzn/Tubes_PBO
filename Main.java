@@ -269,13 +269,11 @@ public class Main{
 		int pil = in.nextInt();
 		switch (pil){
 		case 1 :
-
 		BangunRuang br = new BangunRuang();
-
 		System.out.println("1. KUBUS\n2. BALOK\n3. PRISMA SEGITIGA\n4. LIMAS SEGI EMPAT\n5. LIMAS SEGITIGA\n6. TABUNG\n7. KERUCUT\n8. BOLA");
 		System.out.println("Masukkan Pilihan : ");
 		int pilih = in.nextInt();
-		switch (pil){
+		switch (pilih){
 		case 1 :
 		System.out.println("--KUBUS--");	
 		Kubus kubus = new Kubus();
