@@ -11,7 +11,7 @@ public class menu{
 	System.out.println("|__|  |__|  |__| .'.''| |   |  |  | |     | |  ");
 	System.out.println("                / /   | |_  |  '.'| |     | |  ");
 	System.out.println("                | .._,| '/  |   / | '.    | '. ");
-	System.out.println("                 `--'  `''   `'-'  '---'   '---'");
+	System.out.println("                 `----- '   `'-'  '---'   '---'");
 	System.out.println("=========================================================");
 	System.out.println("=======================MENU PILIHAN======================");
 	System.out.println("=========================================================");
