@@ -1,17 +1,21 @@
 import java.util.*;
+import java.util.Scanner;
+
+
 public class menu{
 	public static void main(String[] args){
+	Scanner in = new Scanner(System.in);
 	System.out.println(" __  __   ___                       .           ");
 	System.out.println("|  |/  `.'   `.                   .'|           ");
 	System.out.println("|   .-.  .-.   '              .| <  |           ");
 	System.out.println("|  |  |  |  |  |    __      .' |_ | |           ");
 	System.out.println("|  |  |  |  |  | .:--.'.  .'     || | .'''-.    ");
 	System.out.println("|  |  |  |  |  |/ |   | |'--.  .-'| |/.'''. |   ");
-	System.out.println("|  |  |  |  |  |'. __ | |   |  |  |  /    | |  ");
-	System.out.println("|__|  |__|  |__| .'.''| |   |  |  | |     | |  ");
-	System.out.println("                / /   | |_  |  '.'| |     | |  ");
-	System.out.println("                | .._,| '/  |   / | '.    | '. ");
-	System.out.println("                 `----- '   `'-'  '---'   '---'");
+	System.out.println("|  |  |  |  |  |'. __ | |   |  |  |  /    | |   ");
+	System.out.println("|__|  |__|  |__| .'.''| |   |  |  | |     | |   ");
+	System.out.println("                / /   | |_  |  '.'| |     | |   ");
+	System.out.println("                | .._,| '/  |   / | '.    | '.  ");
+	System.out.println("                 `----- '   `'-'  '---'   '---' ");
 	System.out.println("=========================================================");
 	System.out.println("=======================MENU PILIHAN======================");
 	System.out.println("=========================================================");
@@ -22,8 +26,10 @@ public class menu{
 	System.out.println("|5| Aritmatika dan Geometri\t\t\t\t|");
 	System.out.println("=========================================================");
 	System.out.println("=========================================================");
-	System.out.println("Masukkan Pilihan : \t\t\t\t\t|");
-	System.out.println("=========================================================");
+	System.out.print("Masukkan Pilihan : ");
+	int pil = in.nextInt();
 
 	}
+	
+
 }
