@@ -38,7 +38,7 @@ class Persegi extends BangunDatar{
 	@Override
 	float keliling(){
 		float keliling = sisi*4;
-		System.out.println ("keliling Persegi \t\t: "+keliling+" cm persegi");
+		System.out.println ("keliling Persegi \t\t: "+keliling+" cm");
 		return keliling;
 	}
 }
