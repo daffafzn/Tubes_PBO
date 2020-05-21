@@ -260,7 +260,7 @@ class Bola extends BangunRuang{
 	}
 }
 
-public class Main{
+public class menu{
 	public static void main(String[] args){
 	
 	Scanner in = new Scanner(System.in);
@@ -480,7 +480,7 @@ public class Main{
 		System.out.println("=========================================================");
 		System.out.println("=========================================================");
 		break;
-	}
+	}break;
 		case 2 :
 		BangunDatar bd = new BangunDatar();
 		System.out.println(" __  __   ___                       .           ");
@@ -568,7 +568,7 @@ public class Main{
 		System.out.println("=========================================================");
 		break;
 
-	}
+	}break;
 	}
 	}
 
