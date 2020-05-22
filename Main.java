@@ -260,10 +260,12 @@ class Bola extends BangunRuang{
 	}
 }
 
-public class Main{
+public class menu{
 	public static void main(String[] args){
-	
+		
 	Scanner in = new Scanner(System.in);
+	char okeh;
+	do{
 	System.out.println(" __  __   ___                       .           ");
 	System.out.println("|  |/  `.'   `.                   .'|           ");
 	System.out.println("|   .-.  .-.   '              .| <  |           ");
@@ -285,7 +287,7 @@ public class Main{
 	System.out.println("|5| Aritmatika dan Geometri\t\t\t\t|");
 	System.out.println("=========================================================");
 	System.out.println("=========================================================");
-	System.out.print("Masukkan Pilihan : ");
+	System.out.print(">>Masukkan Pilihan : ");
 	int pil_menu_1 = in.nextInt();
 	cls();
 	switch(pil_menu_1){
@@ -308,9 +310,10 @@ public class Main{
 	System.out.println("|2| Menghitung Bangun Datar\t\t\t\t|");
 	System.out.println("=========================================================");
 	System.out.println("=========================================================");
-	System.out.print("Masukkan Pilihan : ");
+	System.out.print(">>Masukkan Pilihan : ");
 	int pil_menu_2 = in.nextInt();
 	cls();
+	
 
 	switch (pil_menu_2){
 	case 1 :
@@ -338,7 +341,7 @@ public class Main{
 	System.out.println("|8| Bola\t\t\t\t\t\t|");
 	System.out.println("=========================================================");
 	System.out.println("=========================================================");
-	System.out.print("Masukkan Pilihan : ");
+	System.out.print(">>Masukkan Pilihan : ");
 	int pil_menu_3 = in.nextInt();
 	switch (pil_menu_3){
 		case 1 :
@@ -346,7 +349,7 @@ public class Main{
 		System.out.println("==========================KUBUS==========================");
 		System.out.println("=========================================================");	
 		Kubus kubus = new Kubus();
-		System.out.print("Masukkan sisi kubus(cm) : ");
+		System.out.print(">>Masukkan sisi kubus(cm) : ");
 		int sisi_br_kubus = in.nextInt(); 
 		kubus.sisi = sisi_br_kubus;
 		System.out.println("=========================================================");
@@ -361,11 +364,11 @@ public class Main{
 		System.out.println("==========================BALOK==========================");
 		System.out.println("=========================================================");
 		Balok balok = new Balok();
-		System.out.print("Masukkan panjang(cm) : ");
+		System.out.print(">>Masukkan panjang(cm) : ");
 		int panjang_br_balok = in.nextInt();
-		System.out.print("Masukkan lebar(cm) : ");
+		System.out.print(">>Masukkan lebar(cm) : ");
 		int lebar_br_balok = in.nextInt();
-		System.out.print("Masukkan tinggi(cm) : ");
+		System.out.print(">>Masukkan tinggi(cm) : ");
 		int tinggi_br_balok = in.nextInt();
 		balok.panjang = panjang_br_balok;
 		balok.lebar = lebar_br_balok;
@@ -382,9 +385,9 @@ public class Main{
 		System.out.println("===================PRISMA SEGITIGA=======================");
 		System.out.println("=========================================================");
 		PrismaSegitiga prismasegitiga = new PrismaSegitiga();
-		System.out.print("Masukkan panjang(cm) : ");
+		System.out.print(">>Masukkan panjang(cm) : ");
 		int panjang_br_segitiga = in.nextInt();
-		System.out.print("Masukkan tinggi(cm) : ");
+		System.out.print(">>Masukkan tinggi(cm) : ");
 		int tinggi_br_segitiga = in.nextInt();
 		System.out.println("=========================================================");
 		prismasegitiga.panjang = panjang_br_segitiga;
@@ -399,11 +402,11 @@ public class Main{
 		System.out.println("===================LIMAS SEGI EMPAT======================");
 		System.out.println("=========================================================");
 		LimasSegiempat limassegiempat = new LimasSegiempat();
-		System.out.print("Masukkan panjang(cm) : ");
+		System.out.print(">>Masukkan panjang(cm) : ");
 		int p_br_limassegiempat = in.nextInt();
-		System.out.print("Masukkan lebar(cm) : ");
+		System.out.print(">>Masukkan lebar(cm) : ");
 		int l_br_limassegiempat = in.nextInt();
-		System.out.print("Masukkan tinggi(cm) : ");
+		System.out.print(">>Masukkan tinggi(cm) : ");
 		int t_br_limassegiempat = in.nextInt();
 		limassegiempat.p = p_br_limassegiempat;
 		limassegiempat.l = l_br_limassegiempat;
@@ -418,9 +421,9 @@ public class Main{
 		System.out.println("====================LIMAS SEGITIGA=======================");
 		System.out.println("=========================================================");
 		LimasSegitiga limassegitiga = new LimasSegitiga();
-		System.out.print("Masukkan alas(cm) : ");
+		System.out.print(">>Masukkan alas(cm) : ");
 		int alas_br_limassegitiga = in.nextInt();
-		System.out.print("Masukkan tinggi(cm) : ");
+		System.out.print(">>Masukkan tinggi(cm) : ");
 		int tinggi_br_limassegitiga = in.nextInt();
 		limassegitiga.alas = alas_br_limassegitiga;
 		limassegitiga.tinggi = tinggi_br_limassegitiga;
@@ -434,9 +437,9 @@ public class Main{
 		System.out.println("========================TABUNG===========================");
 		System.out.println("=========================================================");
 		Tabung tabung = new Tabung();
-		System.out.print("Masukkan jari-jari(cm) : ");
+		System.out.print(">>Masukkan jari-jari(cm) : ");
 		int r_br_tabung = in.nextInt();
-		System.out.print("Masukkan tinggi(cm) : ");
+		System.out.print(">>Masukkan tinggi(cm) : ");
 		int t_br_tabung = in.nextInt();
 		tabung.r = r_br_tabung;
 		tabung.t = t_br_tabung;
@@ -451,11 +454,11 @@ public class Main{
 		System.out.println("========================KERUCUT==========================");
 		System.out.println("=========================================================");
 		Kerucut kerucut = new Kerucut();
-		System.out.print("Masukkan jari-jari(cm) : ");
+		System.out.print(">>Masukkan jari-jari(cm) : ");
 		int r_br_kerucut = in.nextInt();
-		System.out.print("Masukkan tinggi(cm) : ");
+		System.out.print(">>Masukkan tinggi(cm) : ");
 		int t_br_kerucut = in.nextInt();
-		System.out.print("Masukkan sisi miring(cm) : ");
+		System.out.print(">>Masukkan sisi miring(cm) : ");
 		int s = in.nextInt();
 		kerucut.r = r_br_kerucut;
 		kerucut.t = t_br_kerucut;
@@ -471,7 +474,7 @@ public class Main{
 		System.out.println("=========================BOLA============================");
 		System.out.println("=========================================================");
 		Bola bola = new Bola();
-		System.out.print("Masukkan jari-jari(cm) : ");
+		System.out.print(">>Masukkan jari-jari(cm) : ");
 		int r_br_bola = in.nextInt();
 		bola.r = r_br_bola;
 		System.out.println("=========================================================");
@@ -503,7 +506,7 @@ public class Main{
   		System.out.println("|4| Rumus Segitiga\t\t\t\t\t|");
   		System.out.println("=========================================================");
   		System.out.println("=========================================================");
-  		System.out.print("Masukkan Pilihan : ");
+  		System.out.print(">>Masukkan Pilihan : ");
 		int pil_menu_4 = in.nextInt();
 		switch (pil_menu_4){
 		case 1 : 
@@ -511,7 +514,7 @@ public class Main{
 		System.out.println("========================PERSEGI==========================");
 		System.out.println("=========================================================");
 		Persegi persegi = new Persegi();
-		System.out.print("Masukkan sisi(cm) : ");
+		System.out.print(">>Masukkan sisi(cm) : ");
 		int sisi_bd = in.nextInt();
 		persegi.sisi = sisi_bd;
 		System.out.println("=========================================================");
@@ -525,7 +528,7 @@ public class Main{
 		System.out.println("========================LINGKARAN========================");
 		System.out.println("=========================================================");
 		Lingkaran lingkaran = new Lingkaran();
-		System.out.print("Masukkan jari-jari(cm) : ");
+		System.out.print(">>Masukkan jari-jari(cm) : ");
 		int r_bd = in.nextInt();
 		lingkaran.r = r_bd;
 		System.out.println("=========================================================");
@@ -539,9 +542,9 @@ public class Main{
 		System.out.println("=====================PERSEGI PANJANG=====================");
 		System.out.println("=========================================================");
 		PersegiPanjang persegipanjang = new PersegiPanjang();
-		System.out.print("Masukkan alas(cm) : ");
+		System.out.print(">>Masukkan alas(cm) : ");
 		int alas_bd = in.nextInt();
-		System.out.print("Masukkan lebar(cm)  : ");
+		System.out.print(">>Masukkan lebar(cm)  : ");
 		int lebar_bd = in.nextInt();
 		persegipanjang.alas = alas_bd;
 		persegipanjang.lebar = lebar_bd;
@@ -556,9 +559,9 @@ public class Main{
 		System.out.println("=====================PERSEGI PANJANG=====================");
 		System.out.println("=========================================================");
 		Segitiga segitiga = new Segitiga();
-		System.out.print("Masukkan alas(cm) : ");
+		System.out.print(">>Masukkan alas(cm) : ");
 		int alas_bd_lingkaran = in.nextInt();
-		System.out.print("Masukkan tinggi(cm) : ");
+		System.out.print(">>Masukkan tinggi(cm) : ");
 		int tinggi_bd_lingkaran = in.nextInt();
 		segitiga.alas = alas_bd_lingkaran;
 		segitiga.tinggi = tinggi_bd_lingkaran;
@@ -571,7 +574,10 @@ public class Main{
 	}break;
 	}
 	}
-
+	System.out.print(">>Apakah anda ingin keluar ? y/n : ");
+	okeh = in.next().charAt(0);
+	cls();
+	}while (okeh=='n'||okeh=='N');
 	}
 	public static void cls(){
 		try{
