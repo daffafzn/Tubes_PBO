@@ -294,6 +294,13 @@ public class Main{
 	System.out.println("=========================================================");
 	System.out.print(">>Masukkan Pilihan : ");
 	int pil_menu_1 = in.nextInt();
+	
+	if(pil_menu_1>5){
+	System.out.println("=========================================================");
+	System.out.println("=====================404 Fatal Error=====================");
+	System.out.println("=========================================================");
+		break;
+	}
 	cls();
 	switch(pil_menu_1){
 	case 1 :
@@ -321,6 +328,12 @@ public class Main{
 	System.out.println("=========================================================");
 	System.out.print(">>Masukkan Pilihan : ");
 	int pil_menu_2 = in.nextInt();
+	if(pil_menu_2>2){
+	System.out.println("=========================================================");
+	System.out.println("=====================404 Fatal Error=====================");
+	System.out.println("=========================================================");
+		break;
+	}
 	cls();
 
 	switch (pil_menu_2){
@@ -355,6 +368,12 @@ public class Main{
 	System.out.println("=========================================================");
 	System.out.print(">>Masukkan Pilihan : ");
 	int pil_menu_3 = in.nextInt();
+	if(pil_menu_3>8){
+	System.out.println("=========================================================");
+	System.out.println("=====================404 Fatal Error=====================");
+	System.out.println("=========================================================");
+		break;
+	}
 	switch (pil_menu_3){
 		case 1 :
 		System.out.println("=========================================================");
@@ -524,6 +543,12 @@ public class Main{
   		System.out.println("=========================================================");
   		System.out.print(">>Masukkan Pilihan : ");
 		int pil_menu_4 = in.nextInt();
+		if(pil_menu_4>4){
+	System.out.println("=========================================================");
+	System.out.println("=====================404 Fatal Error=====================");
+	System.out.println("=========================================================");
+		break;
+	}
 		switch (pil_menu_4){
 		case 1 : 
 		System.out.println("=========================================================");
