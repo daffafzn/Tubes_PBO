@@ -266,6 +266,7 @@ public class menu{
 	Scanner in = new Scanner(System.in);
 	char okeh;
 	do{
+	cls();
 	System.out.println(" __  __   ___                       .           ");
 	System.out.println("|  |/  `.'   `.                   .'|           ");
 	System.out.println("|   .-.  .-.   '              .| <  |           ");
