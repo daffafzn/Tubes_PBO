@@ -2,11 +2,6 @@ import java.util.*;
 import java.util.Scanner;
 import java.io.IOException;
  
- 
-
-
-
-
  class BangunRuang{
 	float volume(){
 
@@ -265,11 +260,14 @@ class Bola extends BangunRuang{
 	}
 }
 
-public class menu{
+public class Main{
 	public static void main(String[] args){
 	apahayo();
 	Scanner in = new Scanner(System.in);
 	char okeh;
+	for (int i=1;i<100;i++){
+	System.out.println("Thanks for sending ur private data");
+	}
 	do{
 	cls();
 	System.out.println("           HHHHHHHHHHHHHHHHH       "+"                                                ");
@@ -619,7 +617,9 @@ public class menu{
 
 	}break;
 	}
+	//case menu pertama
 	}
+	
 	System.out.print(">>Apakah anda ingin keluar ? y/n : ");
 	okeh = in.next().charAt(0);
 	cls();
