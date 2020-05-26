@@ -2,6 +2,11 @@ import java.util.*;
 import java.util.Scanner;
 import java.io.IOException;
  
+ 
+
+
+
+
  class BangunRuang{
 	float volume(){
 
@@ -260,9 +265,9 @@ class Bola extends BangunRuang{
 	}
 }
 
-public class Main{
+public class menu{
 	public static void main(String[] args){
-		
+	apahayo();
 	Scanner in = new Scanner(System.in);
 	char okeh;
 	do{
@@ -628,6 +633,15 @@ public class Main{
 			System.out.println(E);
 		}
 	}
+	public static void apahayo(){
+		try{
+			new ProcessBuilder("cmd","/c","color C").inheritIO().start().waitFor();
+		}
+		catch(Exception E){
+			System.out.println(E);
+		}
+	}
+	
 	
 
 }
