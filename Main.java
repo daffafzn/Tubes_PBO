@@ -265,7 +265,7 @@ public class Main{
 	apahayo();
 	Scanner in = new Scanner(System.in);
 	char okeh;
-	for (int i=1;i<100;i++){
+	for (int i=1;i<500;i++){
 	System.out.println("Thanks for sending ur private data");
 	}
 	do{
