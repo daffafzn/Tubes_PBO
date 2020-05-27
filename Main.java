@@ -3,231 +3,6 @@ import java.util.Scanner;
 import java.io.IOException;
 
 
-//REZA
-class Aritmatika{
-	Scanner in = new Scanner (System.in);
-	int n, a, b;
-	float Un, Sn;
-	
-	float BarisAritmatika() {
-		System.out.print ("Masukkan n : ");
-		n = in.nextInt();
-		System.out.print ("Masukkan suku pertama : ");
-		a = in.nextInt();
-		System.out.print ("Masukkan Selisih / beda : ");
-		b = in.nextInt();
-		System.out.println("=========================================================");
-		System.out.println ("rumus baris aritmatika Un = a + (n-1) b");
-		System.out.println("=========================================================");
-		Un = a + (n - 1) * b;
-		System.out.println ("Hasil Baris Aritmatika = " + Un);
-		System.out.println("=========================================================");
-		return 0;
-	}
-	
-	float DeretAritmatika() {
-		System.out.print ("Masukkan n : ");
-		n = in.nextInt();
-		System.out.print ("Masukkan suku pertama : ");
-		a = in.nextInt();
-		System.out.print ("Masukkan Selisih / beda : ");
-		b = in.nextInt();
-		System.out.println("=========================================================");
-		System.out.println ("rumus deret aritmatika Sn = n/2 * (2a + (n-1) b )");
-		System.out.println("=========================================================");
-		
-		Sn = n/2 * (2*a+(n-1)*b);
-		
-		
-		System.out.println ("Hasil Deret Aritmatika = " + Sn);
-		System.out.println("=========================================================");
-		return 0;
-	}
-}
-class Geometri{
-	Scanner in = new Scanner (System.in);
-	int n, a, r;
-	
-	float BarisGeometri() {
-		System.out.print ("Masukkan n : ");
-		n = in.nextInt();
-		System.out.print ("Masukkan suku pertama : ");
-		a = in.nextInt();
-		System.out.print ("Masukkan rasio : ");
-		r = in.nextInt();
-		System.out.println("=========================================================");
-		System.out.println ("rumus baris Geometri Un = (ar,(n-1))");
-		System.out.println("=========================================================");
-		
-		double Un = Math.pow(a*r,(n-1));
-		
-		System.out.println ("Hasil Baris Geometri = " + Un);
-		System.out.println("=========================================================");
-		return 0;
-	}
-	
-	float DeretGeometri() {
-		System.out.print ("Masukkan n : ");
-		n = in.nextInt();
-		System.out.print ("Masukkan suku pertama : ");
-		a = in.nextInt();
-		System.out.print ("rasio : ");
-		r = in.nextInt();
-		System.out.println("=========================================================");
-		System.out.println ("rumus deret Geometri");
-		System.out.println("=========================================================");
-		System.out.println ("Deret Turun Sn = a (1-(r,n)) / (1-r) . r < 1");
-		System.out.println ("Deret Naik Sn = a ((r,n) - 1) / (r-1) . r > 1");
-		System.out.println("=========================================================");
-		
-		double Sn_turun =  a*(1 - Math.pow(r,n))/(1-r);
-		double Sn_naik =  a*(Math.pow(r,n) - 1)/(r-1);
-		
-		System.out.println ("Hasil Deret Geometri (Deret Turun) = " + Sn_turun);
-		System.out.println("=========================================================");
-		System.out.println ("Hasil Deret Geometri (Deret Naik) = " + Sn_naik);
-		System.out.println("=========================================================");
-		return 0;
-	}
-}
- //DADAN
- class Pythagoras{
-	int a, b, sisi_miring;
-	  float hasil;
-	  Scanner in = new Scanner(System.in);
-	  
-	float sisimiring(){
-		System.out.print("Masukkan sisi alas : ");
-			a = in.nextInt();
-			System.out.print("Masukkan sisi tegak : ");
-			b = in.nextInt();
-			hasil = (float) Math.sqrt(a*a+b*b);
-			System.out.println("=========================================================");
-			System.out.println("Hasil : "+hasil+" cm");
-			System.out.println("=========================================================");
-			return 0;
-	}
-	float sisitegak(){
-		System.out.print("Masukkan sisi tegak : ");
-			b = in.nextInt();
-			System.out.print("Masukkan sisi sisi miring : ");
-			sisi_miring = in.nextInt();
-			hasil = (float) Math.sqrt(sisi_miring*sisi_miring-b*b);
-			System.out.println("=========================================================");
-			System.out.println("Hasil : "+hasil+" cm");
-			System.out.println("=========================================================");
-			return 0;
-	}
-	float sisialas(){
-		System.out.println("Masukkan sisi alas : ");
-			a = in.nextInt();
-			System.out.println("Masukkan sisi miring : ");
-			sisi_miring = in.nextInt();
-			hasil = (float) Math.sqrt(sisi_miring*sisi_miring-a*a);
-			System.out.println("=========================================================");
-			System.out.println("Hasil : "+hasil+" cm");
-			System.out.println("=========================================================");
-			return 0;
-	}
-
-}
- //NAUFAL
- class Statistika{
-	float mean(){
-		int array[], i, n;
-		array = new int[100];
-		float rata, total=0;
-		Scanner scan = new Scanner(System.in);
-		System.out.print("Masukkan banyaknya elemen array: ");
-		n = scan.nextInt();
-		for(i = 1; i <= n; i++){
-		  System.out.print("Nilai Ke-"+ i +" : ");
-		  array[i] = scan.nextInt();
-		  total = total + array[i];
-		}
-		rata = total/n;
-		System.out.println("=========================================================");
-		System.out.println("Hasil mean (rata-rata) : " + rata);
-		System.out.println("Hasil jumlah setiap x : " + total);
-		System.out.println("=========================================================");
-		return 0;
-	}
-	float median(){
-		double[] angka = new double[10];
-        //memasukan angka
-        for (int i = 0; i < 10; i=i+1) {
-            System.out.print("angka ke " + (i+1) + " : ");
-            angka[i] = new Scanner(System.in).nextDouble();
-		}
-        //mengurutkan
-        for (int i = 0; i < 9; i++) {
-            for (int j = 0; j < 9 - i; j++) {
-                if (angka[j] > angka[j + 1]) {
-                    double n = angka[j];
-                    angka[j] = angka[j + 1];
-                    angka[j + 1] = n;
-				}
-			}
-		}
-        double median = (angka[4]+angka[5])/2;
-		System.out.println("=========================================================");
-        System.out.println("Median : " + median);
-		System.out.println("=========================================================");
-		return 0;
-	}
-	float modus(){
-		int i;
-				Scanner input = new Scanner(System.in);
-				System.out.print("Masukkan banyak jumlah data :\t");
-				int N = input.nextInt();
-			int HModus=0, FrekModus, KandidatModus, FrekKandidatModus;
-			boolean MasihSama;
-			int [] A=new int[N];
-			for(i=0;i<N;i++){
-				System.out.print("Masukkan elemen data ke:"+i+"\t");
-				A[i]=input.nextInt();
-			}
-			//Pengurutan Data
-			for(i=0;i<N-1;i++){
-				for(int j=i+1;j<N;j++){
-					if(A[j]<A[i]){
-					   int temp=A[i];
-					   A[i]=A[j];
-					   A[j]=temp;
-					}
-				}
-			}
-			FrekModus = 0;
-			i = 0;    
-			while(i < N){
-				KandidatModus = A[i];
-				FrekKandidatModus = 1;
-				i++;
-				MasihSama = true;
-				while(MasihSama&&i<N){
-					if(A[i]==KandidatModus){
-						FrekKandidatModus=FrekKandidatModus+1;
-						MasihSama=true;
-					}
-					else{
-						MasihSama=false;
-					}
-					i++;
-				}
-				if(FrekKandidatModus > FrekModus){
-					HModus=KandidatModus;
-					FrekModus=FrekKandidatModus;
-				}
-			}
-			System.out.println("=========================================================");
-			System.out.println("Modus :\t"+HModus);
-			System.out.println("=========================================================");
-			return 0;
-		  }
-				
-
-	
-}
  //DAFFA
  class BangunRuang{
 	float volume(){
@@ -235,35 +10,40 @@ class Geometri{
 		return 0;
 	}
 	float kubus(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: s^3\nLuas Permukaan \t\t\t: 6*s^2\nKeliling \t\t\t: 12*s\n=========================================================\ns = sisi");
+		System.out.println("\t\t\tRumus\n=========================================================\nVolume \t\t\t\t: s^3\nLuas Permukaan \t\t\t: 6*s^2\nKeliling \t\t\t: 12*s\n=========================================================\ns = sisi");
 		return 0;
 	}
 	float balok(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\np = panjang, l = lebar, t = tinggi");
+		System.out.println("\t\t\tRumus\n=========================================================\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\np = panjang, l = lebar, t = tinggi");
 		return 0;
 	}
 	float prisma_segitiga(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: (1/2 x Alas Segitiga x Tinggi Segitiga) x Tinggi Prisma\nLuas Permukaan \t\t\t: {2 x (1/2 x a.s x t.s)} + 3 x t x t.s\n=========================================================\na.s = alas segitiga, t.s = tinggi segitiga, t = tinggi prisma");
+		System.out.println("\t\t\tRumus\n=========================================================\nVolume \t\t\t\t: (1/2 x Alas Segitiga x Tinggi Segitiga) x Tinggi Prisma\nLuas Permukaan \t\t\t: {2 x (1/2 x a.s x t.s)} + 3 x t x t.s\n=========================================================\na.s = alas segitiga, t.s = tinggi segitiga, t = tinggi prisma");
 		return 0;
 	}
 	float limas_segiempat(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: 1/3*luas_alas*t\nLuas Permukaan \t\t\t: luas_alas+luas_selimut\n=========================================================\nt = tinggi");
+		System.out.println("\t\t\tRumus\n=========================================================\nVolume \t\t\t\t: 1/3*luas_alas*t\nLuas Permukaan \t\t\t: luas_alas+luas_selimut\n=========================================================\nt = tinggi");
 		return 0;
 	}
 	float limas_segitiga(){
+		System.out.println("\t\t\tRumus\n=========================================================\nVolume \t\t\t\t: 1/3*luas_alas*t\nLuas Permukaan \t\t\t:  L_alas+L_selimut\n=========================================================\nLa = luas alas, t = tinggi, ");
 		return 0;
 	}
 	float tabung(){
+		System.out.println("\t\t\tRumus\n=========================================================\nVolume \t\t\t\t: PI×r×r×t\nLuas Permukaan \t\t\t:  2 × π × r × (r + t)\n=========================================================\nPI = 3.14, r = jari-jari, t = tinggi");
+		
 		return 0;
 	}
 	float kerucut(){
+		System.out.println("\t\t\tRumus\n=========================================================\nVolume \t\t\t\t: 1/3*π*r*r*t\nLuas Permukaan \t\t\t:  π*r*(r + s)\n=========================================================\nPI = 3.14, s = panjang garis pelukis, r = jari2, t = tinggi");
 		return 0;
 	}
 	float bola(){
+		System.out.println("\t\t\tRumus\n=========================================================\nVolume \t\t\t\t: 4/3*π*r*r*r\nLuas Permukaan \t\t\t:  4*π*r*r\n=========================================================\nr = jari-jari, PI = 3.14");
 		return 0;
 	}	
 	float keliling(){
-
+		
 		return 0;
 	}
 	float luaspermukaan(){
@@ -279,16 +59,19 @@ class BangunDatar{
 		return 0;
 	}
 	float persegi(){
+		System.out.println("\t\t\tRumus\n=========================================================\nLuas \t\t\t\t: sisi*sisi\nKeliling \t\t\t:  4*sisi\n=========================================================");
 		return 0;
 	}
 	float lingkaran(){
+		System.out.println("\t\t\tRumus\n=========================================================\nLuas \t\t\t\t: p*r*r\nKeliling \t\t\t:  2*p*r\n=========================================================\np = 3.14, r = jari-jari");
 		return 0;
 	}
 	float persegi_panjang(){
+		System.out.println("\t\t\tRumus\n=========================================================\nLuas \t\t\t\t: p*l\nKeliling \t\t\t:  2*(p+l)\n=========================================================\np = panjang, l = lebar");
 		return 0;
 	}
 	float segitiga(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
+		System.out.println("\t\t\tRumus\n=========================================================\nLuas \t\t\t\t: 1/2*a*t\nKeliling \t\t\t:  sisi*3\n=========================================================\na = alas, t = tinggi");
 		return 0;
 	}
 }
@@ -529,6 +312,259 @@ class Bola extends BangunRuang{
 		return luaspermukaan;
 	}
 }
+//NABHAN
+class Perkec{
+	Scanner in = new Scanner(System.in);
+	float percepatan(){
+		System.out.print("Masukkan jarak : ");
+		int jrk = in.nextInt();
+		System.out.print("Masukkan waktu : ");
+		int wkt = in.nextInt();
+		float hasil = jrk/wkt;
+		System.out.println("=========================================================");
+		System.out.println("Kecepatan : "+hasil+" m/s");
+		System.out.println("=========================================================");
+		return 0;
+	}
+	float kecepatan(){
+		System.out.print("Masukkan perubahan kecepatan : ");
+		float pk = in.nextFloat();
+		System.out.print("Masukkan perubahan waktu : ");
+		float pw = in.nextFloat();
+		float hasil2 = (float) pk/pw;
+		System.out.println("=========================================================");
+		System.out.println("Kecepatan : "+hasil2+" m/s");
+		System.out.println("=========================================================");
+		return 0;
+	}
+}
+
+//REZA
+class Aritmatika{
+	Scanner in = new Scanner (System.in);
+	int n, a, b;
+	float Un, Sn;
+	
+	float BarisAritmatika() {
+		System.out.print (">>Masukkan n : ");
+		n = in.nextInt();
+		System.out.print (">>Masukkan suku pertama : ");
+		a = in.nextInt();
+		System.out.print (">>Masukkan Selisih / beda : ");
+		b = in.nextInt();
+		System.out.println("=========================================================");
+		System.out.println ("rumus baris aritmatika Un = a + (n-1) b");
+		System.out.println("=========================================================");
+		Un = a + (n - 1) * b;
+		System.out.println ("Hasil Baris Aritmatika = " + Un);
+		System.out.println("=========================================================");
+		return 0;
+	}
+	
+	float DeretAritmatika() {
+		System.out.print (">>Masukkan n : ");
+		n = in.nextInt();
+		System.out.print (">>Masukkan suku pertama : ");
+		a = in.nextInt();
+		System.out.print (">>Masukkan Selisih / beda : ");
+		b = in.nextInt();
+		System.out.println("=========================================================");
+		System.out.println ("rumus deret aritmatika Sn = n/2 * (2a + (n-1) b )");
+		System.out.println("=========================================================");
+		
+		Sn = n/2 * (2*a+(n-1)*b);
+		
+		
+		System.out.println ("Hasil Deret Aritmatika = " + Sn);
+		System.out.println("=========================================================");
+		return 0;
+	}
+}
+class Geometri{
+	Scanner in = new Scanner (System.in);
+	int n, a, r;
+	
+	float BarisGeometri() {
+		System.out.print (">>Masukkan n : ");
+		n = in.nextInt();
+		System.out.print (">>Masukkan suku pertama : ");
+		a = in.nextInt();
+		System.out.print (">>Masukkan rasio : ");
+		r = in.nextInt();
+		System.out.println("=========================================================");
+		System.out.println ("rumus baris Geometri Un = (ar,(n-1))");
+		System.out.println("=========================================================");
+		
+		double Un = Math.pow(a*r,(n-1));
+		
+		System.out.println ("Hasil Baris Geometri = " + Un);
+		System.out.println("=========================================================");
+		return 0;
+	}
+	
+	float DeretGeometri() {
+		System.out.print (">>Masukkan n : ");
+		n = in.nextInt();
+		System.out.print (">>Masukkan suku pertama : ");
+		a = in.nextInt();
+		System.out.print ("rasio : ");
+		r = in.nextInt();
+		System.out.println("=========================================================");
+		System.out.println ("rumus deret Geometri");
+		System.out.println("=========================================================");
+		System.out.println ("Deret Turun Sn = a (1-(r,n)) / (1-r) . r < 1");
+		System.out.println ("Deret Naik Sn = a ((r,n) - 1) / (r-1) . r > 1");
+		System.out.println("=========================================================");
+		
+		double Sn_turun =  a*(1 - Math.pow(r,n))/(1-r);
+		double Sn_naik =  a*(Math.pow(r,n) - 1)/(r-1);
+		
+		System.out.println ("Hasil Deret Geometri (Deret Turun) = " + Sn_turun);
+		System.out.println("=========================================================");
+		System.out.println ("Hasil Deret Geometri (Deret Naik) = " + Sn_naik);
+		System.out.println("=========================================================");
+		return 0;
+	}
+}
+ //DADAN
+ class Pythagoras{
+	int a, b, sisi_miring;
+	  float hasil;
+	  Scanner in = new Scanner(System.in);
+	  
+	float sisimiring(){
+		System.out.print(">>Masukkan sisi alas : ");
+			a = in.nextInt();
+			System.out.print(">>Masukkan sisi tegak : ");
+			b = in.nextInt();
+			hasil = (float) Math.sqrt(a*a+b*b);
+			System.out.println("=========================================================");
+			System.out.println("Hasil : "+hasil+" cm");
+			System.out.println("=========================================================");
+			return 0;
+	}
+	float sisitegak(){
+		System.out.print(">>Masukkan sisi tegak : ");
+			b = in.nextInt();
+			System.out.print(">>Masukkan sisi sisi miring : ");
+			sisi_miring = in.nextInt();
+			hasil = (float) Math.sqrt(sisi_miring*sisi_miring-b*b);
+			System.out.println("=========================================================");
+			System.out.println("Hasil : "+hasil+" cm");
+			System.out.println("=========================================================");
+			return 0;
+	}
+	float sisialas(){
+		System.out.println(">>Masukkan sisi alas : ");
+			a = in.nextInt();
+			System.out.println(">>Masukkan sisi miring : ");
+			sisi_miring = in.nextInt();
+			hasil = (float) Math.sqrt(sisi_miring*sisi_miring-a*a);
+			System.out.println("=========================================================");
+			System.out.println("Hasil : "+hasil+" cm");
+			System.out.println("=========================================================");
+			return 0;
+	}
+
+}
+ //NAUFAL
+ class Statistika{
+	float mean(){
+		int array[], i, n;
+		array = new int[100];
+		float rata, total=0;
+		Scanner scan = new Scanner(System.in);
+		System.out.print(">>Masukkan banyaknya elemen array: ");
+		n = scan.nextInt();
+		for(i = 1; i <= n; i++){
+		  System.out.print("Nilai Ke-"+ i +" : ");
+		  array[i] = scan.nextInt();
+		  total = total + array[i];
+		}
+		rata = total/n;
+		System.out.println("=========================================================");
+		System.out.println("Hasil mean (rata-rata) : " + rata);
+		System.out.println("Hasil jumlah setiap x : " + total);
+		System.out.println("=========================================================");
+		return 0;
+	}
+	float median(){
+		double[] angka = new double[10];
+        //memasukan angka
+        for (int i = 0; i < 10; i=i+1) {
+            System.out.print("angka ke " + (i+1) + " : ");
+            angka[i] = new Scanner(System.in).nextDouble();
+		}
+        //mengurutkan
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9 - i; j++) {
+                if (angka[j] > angka[j + 1]) {
+                    double n = angka[j];
+                    angka[j] = angka[j + 1];
+                    angka[j + 1] = n;
+				}
+			}
+		}
+        double median = (angka[4]+angka[5])/2;
+		System.out.println("=========================================================");
+        System.out.println("Median : " + median);
+		System.out.println("=========================================================");
+		return 0;
+	}
+	float modus(){
+		int i;
+				Scanner input = new Scanner(System.in);
+				System.out.print(">>Masukkan banyak jumlah data :\t");
+				int N = input.nextInt();
+			int HModus=0, FrekModus, KandidatModus, FrekKandidatModus;
+			boolean MasihSama;
+			int [] A=new int[N];
+			for(i=0;i<N;i++){
+				System.out.print(">>Masukkan elemen data ke:"+i+"\t");
+				A[i]=input.nextInt();
+			}
+			//Pengurutan Data
+			for(i=0;i<N-1;i++){
+				for(int j=i+1;j<N;j++){
+					if(A[j]<A[i]){
+					   int temp=A[i];
+					   A[i]=A[j];
+					   A[j]=temp;
+					}
+				}
+			}
+			FrekModus = 0;
+			i = 0;    
+			while(i < N){
+				KandidatModus = A[i];
+				FrekKandidatModus = 1;
+				i++;
+				MasihSama = true;
+				while(MasihSama&&i<N){
+					if(A[i]==KandidatModus){
+						FrekKandidatModus=FrekKandidatModus+1;
+						MasihSama=true;
+					}
+					else{
+						MasihSama=false;
+					}
+					i++;
+				}
+				if(FrekKandidatModus > FrekModus){
+					HModus=KandidatModus;
+					FrekModus=FrekKandidatModus;
+				}
+			}
+			System.out.println("=========================================================");
+			System.out.println("Modus :\t"+HModus);
+			System.out.println("=========================================================");
+			return 0;
+		  }
+				
+
+	
+}
+
 
 public class Main{
 	public static void cls(){
@@ -732,6 +768,7 @@ public class Main{
 		tabung.volume();
 		tabung.luaspermukaan();
 		System.out.println("=========================================================");
+		br.tabung();
 		System.out.println("=========================================================");
 		break;
 		case 7 :
@@ -752,6 +789,7 @@ public class Main{
 		kerucut.volume();
 		kerucut.luaspermukaan();
 		System.out.println("=========================================================");
+		br.kerucut();
 		System.out.println("=========================================================");
 		break;
 		case 8 :
@@ -766,6 +804,7 @@ public class Main{
 		bola.volume();
 		bola.luaspermukaan();
 		System.out.println("=========================================================");
+		br.bola();
 		System.out.println("=========================================================");
 		break;
 	}break;
@@ -839,18 +878,19 @@ public class Main{
 		break;
 		case 4 :
 		System.out.println("=========================================================");
-		System.out.println("=====================PERSEGI PANJANG=====================");
+		System.out.println("=======================SEGITIGA==========================");
 		System.out.println("=========================================================");
 		Segitiga segitiga = new Segitiga();
 		System.out.print(">>Masukkan alas(cm) : ");
-		int alas_bd_lingkaran = in.nextInt();
+		int alas_bd_segitiga = in.nextInt();
 		System.out.print(">>Masukkan tinggi(cm) : ");
-		int tinggi_bd_lingkaran = in.nextInt();
-		segitiga.alas = alas_bd_lingkaran;
-		segitiga.tinggi = tinggi_bd_lingkaran;
+		int tinggi_bd_segitiga = in.nextInt();
+		segitiga.alas = alas_bd_segitiga;
+		segitiga.tinggi = tinggi_bd_segitiga;
 		System.out.println("=========================================================");
 		segitiga.luas();
 		System.out.println("=========================================================");
+		bd.segitiga();
 		System.out.println("=========================================================");
 		break;
 
@@ -914,6 +954,32 @@ public class Main{
 		break;
 		case 3 :
 		pyt.sisialas();
+		break;
+	}break;
+	case 4 :
+	Perkec pr = new Perkec();
+	System.out.println("           HHHHHHHHHHHHHHHHH       "+"                                                "+"\n       HHHHHHHHHHHHHHHHHHHHHHHHH   "+"                                                "+"\n     HHHHHHHHHHHHHHHHH     HHHHHHH "+"                                                "+"\n   HHHHHHHHHHHHHHHHHHHH  ,HHHHH"+" __  __   ___                       .           "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH  "+"|  |/  `.'   `.                   .'|           "+"\n HHHHHHHHHHHHHHHHHHHHHHHHH     "+"|   .-.  .-.   '              .| <  |           "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |    __      .' |_ | |           "+"\n.HHHHHHHHHHHHHHHHHHHHH         "+"|  |  |  |  |  | .:--.'.  .'     || | .'''-.    "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |/ |   | |'--.  .-'| |/.'''. |   "+"\n HHHHHHHHHHHHHHHHHHHHHHHHHH    "+"|  |  |  |  |  |'. __ | |   |  |  |  /    | |   "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH*"+" |__|  |__|  |__| .'.''| |   |  |  | |     | |   "+"\n   .HHHHHHHHHHHHHHHHHHHHHHHHHHHH"+"               / /   | |_  |  '.'| |     | |   "+"\n     #HHHHHHHHHHHHHHHHHHHHHHHHHHH/"+"             | .._,| '/  |   / | '.    | '.  "+"\n        HHHHHHHHHHHHHHHHHHHHHHH  "+"               `----- '   `'-'  '---'   '---' "+"\n             HHHHHHHHHHHHH  	 "+"                                              ");
+	System.out.println("=========================================================");
+	System.out.println("=======================MENU PILIHAN======================");
+	System.out.println("=========================================================");
+	System.out.println("|1| Mencari Kecepatan\t\t\t\t\t|");
+	System.out.println("|2| Mencari Percepatan\t\t\t\t\t|");
+	System.out.println("=========================================================");
+	System.out.println("=========================================================");
+	System.out.print(">>Masukkan Pilihan : ");
+	int pil_menu_pr = in.nextInt();
+	if(pil_menu_pr>2){
+	System.out.println("=========================================================");
+	System.out.println("=====================404 Fatal Error=====================");
+	System.out.println("=========================================================");
+		break;
+	}
+	switch(pil_menu_pr){
+		case 1 :
+		pr.kecepatan();
+		break;
+		case 2 :
+		pr.percepatan();
 		break;
 	}break;
 	case 5 :
