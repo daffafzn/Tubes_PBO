@@ -310,7 +310,7 @@ class Bola extends BangunRuang{
 	}
 }
 
-public class menu{
+public class Main{
 	public static void cls(){
 		try{
 			new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
