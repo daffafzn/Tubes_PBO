@@ -7,6 +7,38 @@ import java.io.IOException;
 
 		return 0;
 	}
+	float kubus(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: s^3\nLuas Permukaan \t\t\t: 6*s^2\nKeliling \t\t\t: 12*s\n=========================================================\ns = sisi");
+		return 0;
+	}
+	float balok(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\np = panjang, l = lebar, t = tinggi");
+		return 0;
+	}
+	float prisma_segitiga(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: (1/2 x Alas Segitiga x Tinggi Segitiga) x Tinggi Prisma\nLuas Permukaan \t\t\t: {2 x (1/2 x a.s x t.s)} + 3 x t x t.s\n=========================================================\na.s = alas segitiga, t.s = tinggi segitiga, t = tinggi prisma");
+		return 0;
+	}
+	float limas_segiempat(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: 1/3*luas_alas*t\nLuas Permukaan \t\t\t: luas_alas+luas_selimut\n=========================================================\nt = tinggi");
+		return 0;
+	}
+	float limas_segitiga(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
+		return 0;
+	}
+	float tabung(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
+		return 0;
+	}
+	float kerucut(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
+		return 0;
+	}
+	float bola(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
+		return 0;
+	}	
 	float keliling(){
 
 		return 0;
@@ -21,6 +53,22 @@ class BangunDatar{
 		return 0;
 	}
 	float keliling(){
+		return 0;
+	}
+	float persegi(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
+		return 0;
+	}
+	float lingkaran(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
+		return 0;
+	}
+	float persegi_panjang(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
+		return 0;
+	}
+	float segitiga(){
+		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
 		return 0;
 	}
 }
@@ -222,6 +270,8 @@ class Tabung extends BangunRuang{
 	}
 }
 
+
+
 class Kerucut extends BangunRuang{
 	float r, t, s;
 
@@ -260,14 +310,32 @@ class Bola extends BangunRuang{
 	}
 }
 
-public class Main{
+public class menu{
+	public static void cls(){
+		try{
+			new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
+		}
+		catch(Exception E){
+			System.out.println(E);
+		}
+	}
+	public static void apahayo(){
+		try{
+			new ProcessBuilder("cmd","/c","color C").inheritIO().start().waitFor();
+		}
+		catch(Exception E){
+			System.out.println(E);
+		}
+	}
 	public static void main(String[] args){
 	apahayo();
 	Scanner in = new Scanner(System.in);
 	char okeh;
-	for (int i=1;i<500;i++){
-	System.out.println("Thanks for sending ur private data");
+	for (int i=1;i<100;i++){
+	System.out.println("rebuliding");
 	}
+	BangunRuang br = new BangunRuang();
+	BangunDatar bd = new BangunDatar();
 	do{
 	cls();
 	System.out.println("           HHHHHHHHHHHHHHHHH       "+"                                                ");
@@ -391,6 +459,7 @@ public class Main{
 		kubus.luaspermukaan();
 		kubus.keliling();
 		System.out.println("=========================================================");
+		br.kubus();
 		System.out.println("=========================================================");
 		break;
 		case 2 :
@@ -412,6 +481,7 @@ public class Main{
 		balok.luaspermukaan();
 		balok.keliling();
 		System.out.println("=========================================================");
+		br.balok();
 		System.out.println("=========================================================");
 		break;
 		case 3 :
@@ -429,6 +499,7 @@ public class Main{
 		prismasegitiga.volume();
 		prismasegitiga.luaspermukaan();
 		System.out.println("=========================================================");
+		br.prisma_segitiga();
 		System.out.println("=========================================================");
 		break;
 		case 4 :
@@ -448,6 +519,7 @@ public class Main{
 		System.out.println("=========================================================");
 		limassegiempat.volume();
 		System.out.println("=========================================================");
+		br.limas_segiempat();
 		System.out.println("=========================================================");
 		break;
 		case 5 :
@@ -464,6 +536,7 @@ public class Main{
 		System.out.println("=========================================================");
 		limassegitiga.volume();
 		System.out.println("=========================================================");
+		br.limas_segitiga();
 		System.out.println("=========================================================");
 		break;
 		case 6 :
@@ -519,7 +592,6 @@ public class Main{
 		break;
 	}break;
 	case 2 :
-	BangunDatar bd = new BangunDatar();
 	System.out.println("           HHHHHHHHHHHHHHHHH       "+"                                                ");
 	System.out.println("       HHHHHHHHHHHHHHHHHHHHHHHHH   "+"                                                ");
 	System.out.println("     HHHHHHHHHHHHHHHHH     HHHHHHH "+"                                                ");
@@ -565,6 +637,7 @@ public class Main{
 		persegi.luas();
 		persegi.keliling();
 		System.out.println("=========================================================");
+		bd.persegi();
 		System.out.println("=========================================================");
 		break;
 		case 2 :
@@ -579,6 +652,7 @@ public class Main{
 		lingkaran.luas();
 		lingkaran.keliling();
 		System.out.println("=========================================================");
+		bd.lingkaran();
 		System.out.println("=========================================================");
 		break;
 		case 3 :
@@ -596,6 +670,7 @@ public class Main{
 		persegipanjang.luas();
 		persegipanjang.keliling();
 		System.out.println("=========================================================");
+		bd.persegi_panjang();
 		System.out.println("=========================================================");
 		break;
 		case 4 :
@@ -617,7 +692,6 @@ public class Main{
 
 	}break;
 	}
-	//case menu pertama
 	}
 	
 	System.out.print(">>Apakah anda ingin keluar ? y/n : ");
@@ -625,22 +699,7 @@ public class Main{
 	cls();
 	}while (okeh=='n'||okeh=='N');
 	}
-	public static void cls(){
-		try{
-			new ProcessBuilder("cmd","/c","cls").inheritIO().start().waitFor();
-		}
-		catch(Exception E){
-			System.out.println(E);
-		}
-	}
-	public static void apahayo(){
-		try{
-			new ProcessBuilder("cmd","/c","color C").inheritIO().start().waitFor();
-		}
-		catch(Exception E){
-			System.out.println(E);
-		}
-	}
+	
 	
 	
 
