@@ -2,6 +2,47 @@ import java.util.*;
 import java.util.Scanner;
 import java.io.IOException;
  
+ class Pythagoras{
+	int a, b, sisi_miring;
+	  float hasil;
+	  Scanner in = new Scanner(System.in);
+	  
+	float sisimiring(){
+		System.out.print("Masukkan sisi alas : ");
+			a = in.nextInt();
+			System.out.print("Masukkan sisi tegak : ");
+			b = in.nextInt();
+			hasil = (float) Math.sqrt(a*a+b*b);
+			System.out.println("=========================================================");
+			System.out.println("Hasil : "+hasil+" cm");
+			System.out.println("=========================================================");
+			return 0;
+	}
+	float sisitegak(){
+		System.out.print("Masukkan sisi tegak : ");
+			b = in.nextInt();
+			System.out.print("Masukkan sisi sisi miring : ");
+			sisi_miring = in.nextInt();
+			hasil = (float) Math.sqrt(sisi_miring*sisi_miring-b*b);
+			System.out.println("=========================================================");
+			System.out.println("Hasil : "+hasil+" cm");
+			System.out.println("=========================================================");
+			return 0;
+	}
+	float sisialas(){
+		System.out.println("Masukkan sisi alas : ");
+			a = in.nextInt();
+			System.out.println("Masukkan sisi miring : ");
+			sisi_miring = in.nextInt();
+			hasil = (float) Math.sqrt(sisi_miring*sisi_miring-a*a);
+			System.out.println("=========================================================");
+			System.out.println("Hasil : "+hasil+" cm");
+			System.out.println("=========================================================");
+			return 0;
+	}
+
+}
+ 
  class Statistika{
 	float mean(){
 		int array[], i, n;
@@ -725,7 +766,7 @@ public class Main{
 		break;
 
 	}break;
-	}
+	}break;
 	case 2 :
 	Statistika statis = new Statistika();
 	System.out.println("           HHHHHHHHHHHHHHHHH       "+"                                                "+"\n       HHHHHHHHHHHHHHHHHHHHHHHHH   "+"                                                "+"\n     HHHHHHHHHHHHHHHHH     HHHHHHH "+"                                                "+"\n   HHHHHHHHHHHHHHHHHHHH  ,HHHHH"+" __  __   ___                       .           "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH  "+"|  |/  `.'   `.                   .'|           "+"\n HHHHHHHHHHHHHHHHHHHHHHHHH     "+"|   .-.  .-.   '              .| <  |           "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |    __      .' |_ | |           "+"\n.HHHHHHHHHHHHHHHHHHHHH         "+"|  |  |  |  |  | .:--.'.  .'     || | .'''-.    "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |/ |   | |'--.  .-'| |/.'''. |   "+"\n HHHHHHHHHHHHHHHHHHHHHHHHHH    "+"|  |  |  |  |  |'. __ | |   |  |  |  /    | |   "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH*"+" |__|  |__|  |__| .'.''| |   |  |  | |     | |   "+"\n   .HHHHHHHHHHHHHHHHHHHHHHHHHHHH"+"               / /   | |_  |  '.'| |     | |   "+"\n     #HHHHHHHHHHHHHHHHHHHHHHHHHHH/"+"             | .._,| '/  |   / | '.    | '.  "+"\n        HHHHHHHHHHHHHHHHHHHHHHH  "+"               `----- '   `'-'  '---'   '---' "+"\n             HHHHHHHHHHHHH  	 "+"                                              ");
@@ -755,7 +796,37 @@ public class Main{
 		case 3 :
 		statis.modus();
 		break;
+	}break;
+	case 3 :
+	Pythagoras pyt = new Pythagoras();
+	System.out.println("           HHHHHHHHHHHHHHHHH       "+"                                                "+"\n       HHHHHHHHHHHHHHHHHHHHHHHHH   "+"                                                "+"\n     HHHHHHHHHHHHHHHHH     HHHHHHH "+"                                                "+"\n   HHHHHHHHHHHHHHHHHHHH  ,HHHHH"+" __  __   ___                       .           "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH  "+"|  |/  `.'   `.                   .'|           "+"\n HHHHHHHHHHHHHHHHHHHHHHHHH     "+"|   .-.  .-.   '              .| <  |           "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |    __      .' |_ | |           "+"\n.HHHHHHHHHHHHHHHHHHHHH         "+"|  |  |  |  |  | .:--.'.  .'     || | .'''-.    "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |/ |   | |'--.  .-'| |/.'''. |   "+"\n HHHHHHHHHHHHHHHHHHHHHHHHHH    "+"|  |  |  |  |  |'. __ | |   |  |  |  /    | |   "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH*"+" |__|  |__|  |__| .'.''| |   |  |  | |     | |   "+"\n   .HHHHHHHHHHHHHHHHHHHHHHHHHHHH"+"               / /   | |_  |  '.'| |     | |   "+"\n     #HHHHHHHHHHHHHHHHHHHHHHHHHHH/"+"             | .._,| '/  |   / | '.    | '.  "+"\n        HHHHHHHHHHHHHHHHHHHHHHH  "+"               `----- '   `'-'  '---'   '---' "+"\n             HHHHHHHHHHHHH  	 "+"                                              ");
+	System.out.println("=========================================================");
+	System.out.println("=======================MENU PILIHAN======================");
+	System.out.println("=========================================================");
+	System.out.println("|1| Mencari Sisi Miring\t\t\t\t\t|");
+	System.out.println("|2| Mencari Sisi Tegak\t\t\t\t\t|");
+	System.out.println("|3| Mencari Sisi Alas\t\t\t\t\t|");
+	System.out.println("=========================================================");
+	System.out.println("=========================================================");
+	System.out.print(">>Masukkan Pilihan : ");
+	int pil_menu_py = in.nextInt();
+	if(pil_menu_py>3){
+	System.out.println("=========================================================");
+	System.out.println("=====================404 Fatal Error=====================");
+	System.out.println("=========================================================");
+		break;
 	}
+	switch(pil_menu_py){
+		case 1 : 
+		pyt.sisimiring();
+		break;
+		case 2 :
+		pyt.sisitegak();
+		break;
+		case 3 :
+		pyt.sisialas();
+		break;
+	}break;
 }
 	
 	System.out.print(">>Apakah anda ingin keluar ? y/n : ");
