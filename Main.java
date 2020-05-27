@@ -67,7 +67,7 @@ class BangunDatar{
 		return 0;
 	}
 	float persegi_panjang(){
-		System.out.println("\t\t\tRumus\n=========================================================\nLuas \t\t\t\t: p*l\nKeliling \t\t\t:  2*(p+l)\n=========================================================\np = panjang, l = lebar");
+		System.out.println("\t\t\tRumus\n========================================================\nLuas \t\t\t\t: p*l\nKeliling \t\t\t:  2*(p+l)\n=========================================================\np = panjang, l = lebar");
 		return 0;
 	}
 	float segitiga(){
