@@ -1,7 +1,96 @@
 import java.util.*;
 import java.util.Scanner;
 import java.io.IOException;
- 
+
+
+//REZA
+class Aritmatika{
+	Scanner in = new Scanner (System.in);
+	int n, a, b;
+	float Un, Sn;
+	
+	float BarisAritmatika() {
+		System.out.print ("Masukkan n : ");
+		n = in.nextInt();
+		System.out.print ("Masukkan suku pertama : ");
+		a = in.nextInt();
+		System.out.print ("Masukkan Selisih / beda : ");
+		b = in.nextInt();
+		System.out.println("=========================================================");
+		System.out.println ("rumus baris aritmatika Un = a + (n-1) b");
+		System.out.println("=========================================================");
+		Un = a + (n - 1) * b;
+		System.out.println ("Hasil Baris Aritmatika = " + Un);
+		System.out.println("=========================================================");
+		return 0;
+	}
+	
+	float DeretAritmatika() {
+		System.out.print ("Masukkan n : ");
+		n = in.nextInt();
+		System.out.print ("Masukkan suku pertama : ");
+		a = in.nextInt();
+		System.out.print ("Masukkan Selisih / beda : ");
+		b = in.nextInt();
+		System.out.println("=========================================================");
+		System.out.println ("rumus deret aritmatika Sn = n/2 * (2a + (n-1) b )");
+		System.out.println("=========================================================");
+		
+		Sn = n/2 * (2*a+(n-1)*b);
+		
+		
+		System.out.println ("Hasil Deret Aritmatika = " + Sn);
+		System.out.println("=========================================================");
+		return 0;
+	}
+}
+class Geometri{
+	Scanner in = new Scanner (System.in);
+	int n, a, r;
+	
+	float BarisGeometri() {
+		System.out.print ("Masukkan n : ");
+		n = in.nextInt();
+		System.out.print ("Masukkan suku pertama : ");
+		a = in.nextInt();
+		System.out.print ("Masukkan rasio : ");
+		r = in.nextInt();
+		System.out.println("=========================================================");
+		System.out.println ("rumus baris Geometri Un = (ar,(n-1))");
+		System.out.println("=========================================================");
+		
+		double Un = Math.pow(a*r,(n-1));
+		
+		System.out.println ("Hasil Baris Geometri = " + Un);
+		System.out.println("=========================================================");
+		return 0;
+	}
+	
+	float DeretGeometri() {
+		System.out.print ("Masukkan n : ");
+		n = in.nextInt();
+		System.out.print ("Masukkan suku pertama : ");
+		a = in.nextInt();
+		System.out.print ("rasio : ");
+		r = in.nextInt();
+		System.out.println("=========================================================");
+		System.out.println ("rumus deret Geometri");
+		System.out.println("=========================================================");
+		System.out.println ("Deret Turun Sn = a (1-(r,n)) / (1-r) . r < 1");
+		System.out.println ("Deret Naik Sn = a ((r,n) - 1) / (r-1) . r > 1");
+		System.out.println("=========================================================");
+		
+		double Sn_turun =  a*(1 - Math.pow(r,n))/(1-r);
+		double Sn_naik =  a*(Math.pow(r,n) - 1)/(r-1);
+		
+		System.out.println ("Hasil Deret Geometri (Deret Turun) = " + Sn_turun);
+		System.out.println("=========================================================");
+		System.out.println ("Hasil Deret Geometri (Deret Naik) = " + Sn_naik);
+		System.out.println("=========================================================");
+		return 0;
+	}
+}
+ //DADAN
  class Pythagoras{
 	int a, b, sisi_miring;
 	  float hasil;
@@ -42,7 +131,7 @@ import java.io.IOException;
 	}
 
 }
- 
+ //NAUFAL
  class Statistika{
 	float mean(){
 		int array[], i, n;
@@ -139,7 +228,7 @@ import java.io.IOException;
 
 	
 }
- 
+ //DAFFA
  class BangunRuang{
 	float volume(){
 
@@ -827,6 +916,41 @@ public class Main{
 		pyt.sisialas();
 		break;
 	}break;
+	case 5 :
+	Aritmatika aritm = new Aritmatika();
+	Geometri geom = new Geometri();
+	System.out.println("           HHHHHHHHHHHHHHHHH       "+"                                                "+"\n       HHHHHHHHHHHHHHHHHHHHHHHHH   "+"                                                "+"\n     HHHHHHHHHHHHHHHHH     HHHHHHH "+"                                                "+"\n   HHHHHHHHHHHHHHHHHHHH  ,HHHHH"+" __  __   ___                       .           "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH  "+"|  |/  `.'   `.                   .'|           "+"\n HHHHHHHHHHHHHHHHHHHHHHHHH     "+"|   .-.  .-.   '              .| <  |           "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |    __      .' |_ | |           "+"\n.HHHHHHHHHHHHHHHHHHHHH         "+"|  |  |  |  |  | .:--.'.  .'     || | .'''-.    "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |/ |   | |'--.  .-'| |/.'''. |   "+"\n HHHHHHHHHHHHHHHHHHHHHHHHHH    "+"|  |  |  |  |  |'. __ | |   |  |  |  /    | |   "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH*"+" |__|  |__|  |__| .'.''| |   |  |  | |     | |   "+"\n   .HHHHHHHHHHHHHHHHHHHHHHHHHHHH"+"               / /   | |_  |  '.'| |     | |   "+"\n     #HHHHHHHHHHHHHHHHHHHHHHHHHHH/"+"             | .._,| '/  |   / | '.    | '.  "+"\n        HHHHHHHHHHHHHHHHHHHHHHH  "+"               `----- '   `'-'  '---'   '---' "+"\n             HHHHHHHHHHHHH  	 "+"                                              ");
+	System.out.println("=========================================================");
+	System.out.println("=======================MENU PILIHAN======================");
+	System.out.println("=========================================================");
+	System.out.println("|1| Baris Aritmatika\t\t\t\t\t|");
+	System.out.println("|2| Deret Aritmatika\t\t\t\t\t|");
+	System.out.println("|3| Baris Geometri\t\t\t\t\t|");
+	System.out.println("|4| Deret Geometri\t\t\t\t\t|");
+	System.out.println("=========================================================");
+	System.out.println("=========================================================");
+	System.out.print(">>Masukkan Pilihan : ");
+	int pil_menu_arit = in.nextInt();
+	if(pil_menu_arit>4){
+	System.out.println("=========================================================");
+	System.out.println("=====================404 Fatal Error=====================");
+	System.out.println("=========================================================");
+		break;
+	}
+	switch(pil_menu_arit){
+		case 1 :
+		aritm.BarisAritmatika();
+		break;
+		case 2 :
+		aritm.DeretAritmatika();
+		break;
+		case 3 :
+		geom.BarisGeometri();
+		break;
+		case 4 :
+		geom.DeretGeometri();
+		break;	
+	}break;
 }
 	
 	System.out.print(">>Apakah anda ingin keluar ? y/n : ");
@@ -838,4 +962,4 @@ public class Main{
 	
 	
 
-}
+}	
