@@ -2,6 +2,103 @@ import java.util.*;
 import java.util.Scanner;
 import java.io.IOException;
  
+ class Statistika{
+	float mean(){
+		int array[], i, n;
+		array = new int[100];
+		float rata, total=0;
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Masukkan banyaknya elemen array: ");
+		n = scan.nextInt();
+		for(i = 1; i <= n; i++){
+		  System.out.print("Nilai Ke-"+ i +" : ");
+		  array[i] = scan.nextInt();
+		  total = total + array[i];
+		}
+		rata = total/n;
+		System.out.println("=========================================================");
+		System.out.println("Hasil mean (rata-rata) : " + rata);
+		System.out.println("Hasil jumlah setiap x : " + total);
+		System.out.println("=========================================================");
+		return 0;
+	}
+	float median(){
+		double[] angka = new double[10];
+        //memasukan angka
+        for (int i = 0; i < 10; i=i+1) {
+            System.out.print("angka ke " + (i+1) + " : ");
+            angka[i] = new Scanner(System.in).nextDouble();
+		}
+        //mengurutkan
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9 - i; j++) {
+                if (angka[j] > angka[j + 1]) {
+                    double n = angka[j];
+                    angka[j] = angka[j + 1];
+                    angka[j + 1] = n;
+				}
+			}
+		}
+        double median = (angka[4]+angka[5])/2;
+		System.out.println("=========================================================");
+        System.out.println("Median : " + median);
+		System.out.println("=========================================================");
+		return 0;
+	}
+	float modus(){
+		int i;
+				Scanner input = new Scanner(System.in);
+				System.out.print("Masukkan banyak jumlah data :\t");
+				int N = input.nextInt();
+			int HModus=0, FrekModus, KandidatModus, FrekKandidatModus;
+			boolean MasihSama;
+			int [] A=new int[N];
+			for(i=0;i<N;i++){
+				System.out.print("Masukkan elemen data ke:"+i+"\t");
+				A[i]=input.nextInt();
+			}
+			//Pengurutan Data
+			for(i=0;i<N-1;i++){
+				for(int j=i+1;j<N;j++){
+					if(A[j]<A[i]){
+					   int temp=A[i];
+					   A[i]=A[j];
+					   A[j]=temp;
+					}
+				}
+			}
+			FrekModus = 0;
+			i = 0;    
+			while(i < N){
+				KandidatModus = A[i];
+				FrekKandidatModus = 1;
+				i++;
+				MasihSama = true;
+				while(MasihSama&&i<N){
+					if(A[i]==KandidatModus){
+						FrekKandidatModus=FrekKandidatModus+1;
+						MasihSama=true;
+					}
+					else{
+						MasihSama=false;
+					}
+					i++;
+				}
+				if(FrekKandidatModus > FrekModus){
+					HModus=KandidatModus;
+					FrekModus=FrekKandidatModus;
+				}
+			}
+			System.out.println("=========================================================");
+			System.out.println("Modus :\t"+HModus);
+			System.out.println("=========================================================");
+			return 0;
+		  }
+				
+
+	
+}
+ 
  class BangunRuang{
 	float volume(){
 
@@ -24,19 +121,15 @@ import java.io.IOException;
 		return 0;
 	}
 	float limas_segitiga(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
 		return 0;
 	}
 	float tabung(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
 		return 0;
 	}
 	float kerucut(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
 		return 0;
 	}
 	float bola(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
 		return 0;
 	}	
 	float keliling(){
@@ -56,15 +149,12 @@ class BangunDatar{
 		return 0;
 	}
 	float persegi(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
 		return 0;
 	}
 	float lingkaran(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
 		return 0;
 	}
 	float persegi_panjang(){
-		System.out.println("\t\t\tRumus\nVolume \t\t\t\t: p*l*t\nLuas Permukaan \t\t\t: 2*(p*l + p*t +l*t)\nKeliling \t\t\t: 4*(p+l+t)\n=========================================================\ns = sisi");
 		return 0;
 	}
 	float segitiga(){
@@ -636,7 +726,37 @@ public class Main{
 
 	}break;
 	}
+	case 2 :
+	Statistika statis = new Statistika();
+	System.out.println("           HHHHHHHHHHHHHHHHH       "+"                                                "+"\n       HHHHHHHHHHHHHHHHHHHHHHHHH   "+"                                                "+"\n     HHHHHHHHHHHHHHHHH     HHHHHHH "+"                                                "+"\n   HHHHHHHHHHHHHHHHHHHH  ,HHHHH"+" __  __   ___                       .           "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH  "+"|  |/  `.'   `.                   .'|           "+"\n HHHHHHHHHHHHHHHHHHHHHHHHH     "+"|   .-.  .-.   '              .| <  |           "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |    __      .' |_ | |           "+"\n.HHHHHHHHHHHHHHHHHHHHH         "+"|  |  |  |  |  | .:--.'.  .'     || | .'''-.    "+"\n HHHHHHHHHHHHHHHHHHHHHHH       "+"|  |  |  |  |  |/ |   | |'--.  .-'| |/.'''. |   "+"\n HHHHHHHHHHHHHHHHHHHHHHHHHH    "+"|  |  |  |  |  |'. __ | |   |  |  |  /    | |   "+"\n  HHHHHHHHHHHHHHHHHHHHHHHHHHH*"+" |__|  |__|  |__| .'.''| |   |  |  | |     | |   "+"\n   .HHHHHHHHHHHHHHHHHHHHHHHHHHHH"+"               / /   | |_  |  '.'| |     | |   "+"\n     #HHHHHHHHHHHHHHHHHHHHHHHHHHH/"+"             | .._,| '/  |   / | '.    | '.  "+"\n        HHHHHHHHHHHHHHHHHHHHHHH  "+"               `----- '   `'-'  '---'   '---' "+"\n             HHHHHHHHHHHHH  	 "+"                                              ");
+	System.out.println("=========================================================");
+	System.out.println("=======================MENU PILIHAN======================");
+	System.out.println("=========================================================");
+	System.out.println("|1| Mencari Mean\t\t\t\t\t|");
+	System.out.println("|2| Mencari Median\t\t\t\t\t|");
+	System.out.println("|3| Mencari Modus\t\t\t\t\t|");
+	System.out.println("=========================================================");
+	System.out.println("=========================================================");
+	System.out.print(">>Masukkan Pilihan : ");
+	int pil_menu_statis = in.nextInt();
+	if(pil_menu_statis>3){
+	System.out.println("=========================================================");
+	System.out.println("=====================404 Fatal Error=====================");
+	System.out.println("=========================================================");
+		break;
 	}
+	switch (pil_menu_statis){
+		case 1 : 
+		statis.mean();
+		break;
+		case 2 :
+		statis.median();
+		break;
+		case 3 :
+		statis.modus();
+		break;
+	}
+}
 	
 	System.out.print(">>Apakah anda ingin keluar ? y/n : ");
 	okeh = in.next().charAt(0);
